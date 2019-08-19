@@ -5,13 +5,13 @@ $(function() {
       var newDevoured = $(this).data("newdevoured");
   
       var newdevouredState = {
-        devoured: newdevoured
+        devoured: newDevoured
       };
   
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newDevouredState
+        data: newdevouredState
       }).then(
         function() {
           console.log("changed devoured to", newDevoured);
@@ -31,7 +31,7 @@ $(function() {
       };
   
       // Send the POST request.
-      $.ajax("/api/burgerss", {
+      $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
       }).then(
